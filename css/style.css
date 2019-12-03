@@ -2,6 +2,16 @@ main > .container {
 	padding: 2em 15px 4em;
 }
 
+nav.navbar .right-side-items a {
+	color: #eee;
+}
+nav.navbar .right-side-items a:hover {
+	color: #fff;
+}
+nav.navbar .right-side-items a svg {
+	width: 25px;
+}
+
 .footer {
 	position: fixed;
 	bottom: 0;
