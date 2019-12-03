@@ -7,6 +7,21 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<title>Backbone.js Test</title>
+
+	<script type="text/template" id="empty-people-list-tpl">
+		<div class="alert alert-danger" role="alert">
+			<%= message %>
+		</div>
+	</script>
+
+	<script type="text/template" id="people-list-tpl">
+		<ul class="list-group" id="people-list"></ul>
+	</script>
+
+	<script type="text/template" id="people-list-item-tpl">
+		<li class="list-group-item d-flex justify-content-between align-items-center"><%= name %><span class="badge badge-primary badge-pill"><%= age %></span>
+		</li>
+    </script>
 </head>
 
 <body>
@@ -50,18 +65,34 @@
 
 	<main role="main">
 		<div class="container" id="page-content">
-			<div class="row">
+			<div class="row py-2">
 				<div class="col-12">
 					<h2>Backbone.js Test</h2>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row py-2">
 				<div class="col-12">
 					<p class="lead">This page contains Backbone.js related tests</p>
 					<p>The tests grow over time so don't expect much at the beginning.</p>
 				</div>
 			</div>
+            <div class="row py-2">
+                <div class="col sm-6">
+                    <h3>People</h3>
+                    <hr />
+					<div id="people-list-wrapper">
 
+					</div>
+                </div>
+                <div class="col sm-6">
+                    <h3>Other Stuff</h3>
+                </div>
+            </div>
+
+			<div class="row py-4" id="last-page-row">
+				<div class="col">
+				</div>
+			</div>
 		</div>
 	</main>
 
@@ -79,5 +110,4 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
-
 </html>
