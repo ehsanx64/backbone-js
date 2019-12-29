@@ -1,3 +1,34 @@
+(function ($) {
+    $(function () {
+        console.log('App.js loaded');
+
+        /* If elements carousel demo element exists enable owlCarousel for it */
+        if ($('.elements-carousel').length > 0) {
+            $('.elements-carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                responsiveClass: true,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                smartSpeed: 1000,
+                navText: ['<i class="icofont icofont-rounded-left"></i>', '<i class="icofont icofont-rounded-right"></i>'],
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        }
+    })
+})(jQuery);
+
 // Create a new model class using Backbone.js (by extending it)
 var Person = Backbone.Model.extend({
 	defaults: {}
