@@ -34,13 +34,13 @@ p.add(new Person({
 }));
 
 var PersonView = Backbone.View.extend({
-	template: _.template($('#people-list-item-tpl').html()),
-	initialize: function () {
-	},
+	// template: _.template($('#people-list-item-tpl').html()),
+	// initialize: function () {
+	// },
 
-	render: function () {
-		return this.template((this.model.attributes));
-	}
+	// render: function () {
+	// 	return this.template((this.model.attributes));
+	// }
 });
 
 var PeopleView = Backbone.View.extend({
@@ -73,4 +73,4 @@ var PeopleView = Backbone.View.extend({
 });
 
 
-var pv = new PeopleView;
+// var pv = new PeopleView;
