@@ -1,6 +1,15 @@
+#elements-pills {
+    margin-bottom: 1em;
+}
+
+.tabs-list-2 li a {
+    border-radius: 15px;
+}
+
 a.navbar-brand {
     padding: 7px;
 }
+
 a.navbar-brand img {
     width: 200px;
 }
