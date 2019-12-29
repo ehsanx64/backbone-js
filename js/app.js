@@ -26,6 +26,19 @@
                 }
             });
         }
+
+        /* Attach click handlers for service plus buttons if needed */
+        if ($('#basic-test-area .box-plus').length > 0) {
+            var $parentBox;
+            $('#basic-test-area .box-plus').click(function (event) {
+                event.preventDefault();
+                $parentBox = $(event.target);
+                $parentBox.parents('.service-box').animate({
+                    height: '400px'
+                }, 'slow');
+                console.log('Service plus button clicked');
+            });
+        }
     })
 })(jQuery);
 
