@@ -23,6 +23,18 @@
     right: -25px;
 }
 
+#basic-test-area .service-box input[type=text].form-control {
+    padding: 4px;
+}
+#basic-test-area .service-box .box-drawer {
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+#basic-test-area .service-box .box-drawer.open {
+    max-height: 600px;
+    transition: 2s;
+}
 .tabs-list-2 li a {
     border-radius: 15px;
 }

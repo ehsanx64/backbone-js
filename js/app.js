@@ -29,13 +29,19 @@
 
         /* Attach click handlers for service plus buttons if needed */
         if ($('#basic-test-area .box-plus').length > 0) {
-            var $parentBox;
+            var $parentBox, $target;
             $('#basic-test-area .box-plus').click(function (event) {
                 event.preventDefault();
-                $parentBox = $(event.target);
-                $parentBox.parents('.service-box').animate({
-                    height: '400px'
-                }, 'slow');
+                $parentBox = $(event.target).parents('.service-box');
+                $target = $parentBox.find('.box-drawer');
+                if ($target.hasClass('open')) {
+                    $parentBox.find('.icofont').removeClass('icofont-minus').addClass('icofont-plus');
+                    $target.removeClass('open');
+                } else {
+                    $parentBox.find('.icofont').removeClass('icofont-plus').addClass('icofont-minus');
+                    $target.addClass('open');
+
+                }
                 console.log('Service plus button clicked');
             });
         }
