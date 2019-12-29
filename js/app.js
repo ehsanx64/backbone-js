@@ -1,18 +1,18 @@
 // Create a new model class using Backbone.js (by extending it)
 var Person = Backbone.Model.extend({
-    defaults: { }
+	defaults: {}
 });
 
 // Create a collection for holding Person objects
 var People = Backbone.Collection.extend({
-    model: Person
+	model: Person
 });
 
 var p = new People;
 p.add(new Person({
-    name: 'Ivan',
-    age: 32,
-    sex: 'Male'
+	name: 'Ivan',
+	age: 32,
+	sex: 'Male'
 }));
 
 p.add(new Person({
@@ -67,7 +67,7 @@ var PeopleView = Backbone.View.extend({
 			});
 		} else {
 			var error = _.template($('#empty-people-list-tpl').html());
-			this.$el.html(error({message: 'Empty List'}));
+			this.$el.html(error({ message: 'Empty List' }));
 		}
 	}
 });
