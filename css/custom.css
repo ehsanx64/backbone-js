@@ -47,6 +47,9 @@ a.navbar-brand img {
     width: 200px;
 }
 
+.col-bottom-margin {
+    margin-bottom: 1em;
+}
 
 @media only screen and (max-width: 767px) {
     .mainmenu-area #mainmenu {
