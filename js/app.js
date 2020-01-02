@@ -65,16 +65,29 @@ var Test1View = Backbone.View.extend({
 
     initialize: function() {
         this.render();
-
     },
 
     render: function () {
-        var where = 'Render view';
         this.$el.html(this.template());
     }
 });
 
+var Test2View = Backbone.View.extend({
+    el: '#test-2',
+    $el: $('#test-2'),
+    template: _.template($('#test-2-tpl').html()),
+
+    initialize: function () {
+        this.render();
+    },
+
+    render: function () {
+       this.$el.html(this.template());
+    }
+})
+
 var t1v = new Test1View();
+var t2v = new Test2View();
 
 
 var p = new People;
