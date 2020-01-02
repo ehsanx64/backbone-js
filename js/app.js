@@ -1,6 +1,6 @@
 (function ($) {
     $(function () {
-        console.log('App.js loaded');
+        console.log('### App.js loaded');
 
         /* If elements carousel demo element exists enable owlCarousel for it */
         if ($('.elements-carousel').length > 0) {
@@ -57,6 +57,25 @@ var Person = Backbone.Model.extend({
 var People = Backbone.Collection.extend({
 	model: Person
 });
+
+var Test1View = Backbone.View.extend({
+    el: '#test-1',
+    $el: $('#test-1'),
+    template: _.template($('#test-1-tpl').html()),
+
+    initialize: function() {
+        this.render();
+
+    },
+
+    render: function () {
+        var where = 'Render view';
+        this.$el.html(this.template());
+    }
+});
+
+var t1v = new Test1View();
+
 
 var p = new People;
 p.add(new Person({
