@@ -97,7 +97,14 @@ var Test2View = Backbone.View.extend({
     },
 
     nameChange: function (event) {
-        this.model.set('name', event.target.value);
+        var val = event.target.value;
+
+        // If textbox for name is empty use default value
+        if (val.length == 0) {
+            this.model.set('name', this.model.defaults.name);
+        } else {
+            this.model.set('name', val);
+        }
     },
 
     click: function () {
