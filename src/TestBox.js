@@ -1,20 +1,23 @@
 TestBox = Backbone.View.extend({
     template: _.template($('#test-box-tpl').html()),
     drawerOpen: false,
+    data: {},
 
     events: {
         'click .toggle-drawer': 'toggleDrawer'
     },
 
-    initialize: function () {
+    initialize: function (opt) {
+        this.data = {
+            image: opt.image,
+            title: opt.title,
+            content: opt.content
+        };
         this.render();  
     },
 
     render: function () {
-        this.$el.html(this.template({
-            'title': 'The Title',
-            'content': '<p><strong>Hello</strong> here man!</p>'
-        }));
+        this.$el.html(this.template(this.data));
     },
 
     toggleDrawer: function (event) {

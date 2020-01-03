@@ -94,7 +94,19 @@ __webpack_require__(3);
 
 t1v = new Test1View();
 t2v = new Test2View();
-testbox = new TestBox({'el': '#test-3'});
+testbox3 = new TestBox({
+    'el': '#test-3',
+    'title': "Test #3",
+    'content': '<p><strong>Hello</strong>!&nbsp;This is the content for Test #3.</p>',
+    'image': 'images/service-3.jpg'
+});
+
+testbox4 = new TestBox({
+    'el': '#test-4',
+    'title': "Test #4",
+    'content': '<p><em><strong>Test #4</strong></em>&nbsp is about how to use Backbone.js powered UI components.</p>',
+    'image': 'images/service-4.jpg'
+});
 
 (function ($) {
     $(function () {
@@ -225,20 +237,23 @@ Test2View = Backbone.View.extend({
 TestBox = Backbone.View.extend({
     template: _.template($('#test-box-tpl').html()),
     drawerOpen: false,
+    data: {},
 
     events: {
         'click .toggle-drawer': 'toggleDrawer'
     },
 
-    initialize: function () {
+    initialize: function (opt) {
+        this.data = {
+            image: opt.image,
+            title: opt.title,
+            content: opt.content
+        };
         this.render();  
     },
 
     render: function () {
-        this.$el.html(this.template({
-            'title': 'The Title',
-            'content': '<p><strong>Hello</strong> here man!</p>'
-        }));
+        this.$el.html(this.template(this.data));
     },
 
     toggleDrawer: function (event) {
