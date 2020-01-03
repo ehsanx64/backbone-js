@@ -90,9 +90,11 @@
 
 __webpack_require__(1);
 __webpack_require__(2);
+__webpack_require__(3);
 
 t1v = new Test1View();
 t2v = new Test2View();
+testbox = new TestBox({'el': '#test-3'});
 
 (function ($) {
     $(function () {
@@ -126,7 +128,7 @@ t2v = new Test2View();
         /* Attach click handlers for service plus buttons if needed */
         if ($('#basic-test-area .box-plus').length > 0) {
             var $parentBox, $target;
-            $('#basic-test-area .box-plus').click(function (event) {
+            $('#basic-test-area .primitive-test-box.box-plus').click(function (event) {
                 event.preventDefault();
                 $parentBox = $(event.target).parents('.service-box');
                 $target = $parentBox.find('.box-drawer');
@@ -138,7 +140,6 @@ t2v = new Test2View();
                     $target.addClass('open');
 
                 }
-                console.log('Service plus button clicked');
             });
         }
     })
@@ -214,6 +215,47 @@ Test2View = Backbone.View.extend({
 
     render: function () {
        this.$el.html(this.template(this.model.attributes));
+    }
+})
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+TestBox = Backbone.View.extend({
+    template: _.template($('#test-box-tpl').html()),
+    drawerOpen: false,
+
+    events: {
+        'click .toggle-drawer': 'toggleDrawer'
+    },
+
+    initialize: function () {
+        this.render();  
+    },
+
+    render: function () {
+        this.$el.html(this.template({
+            'title': 'The Title',
+            'content': '<p><strong>Hello</strong> here man!</p>'
+        }));
+    },
+
+    toggleDrawer: function (event) {
+        event.preventDefault();
+        var $t = $(event.target);
+        var $boxDrawer = this.$el.find('.box-drawer');
+
+        if (this.drawerOpen) {
+            $boxDrawer.removeClass('open');
+            $t.removeClass('icofont-minus').addClass('icofont-plus');
+            this.drawerOpen = false;
+        } else {
+            $t.removeClass('icofont-plus').addClass('icofont-minus');
+            $boxDrawer.addClass('open');
+            this.drawerOpen = true;
+
+        }
     }
 })
 

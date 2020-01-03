@@ -28,12 +28,12 @@
 }
 #basic-test-area .service-box .box-drawer {
     max-height: 0;
-    transition: 1s;
+    transition: 300ms;
     overflow: hidden;
 }
 #basic-test-area .service-box .box-drawer.open {
     max-height: 600px;
-    transition: 2s;
+    transition: 1s;
 }
 .tabs-list-2 li a {
     border-radius: 15px;

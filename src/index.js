@@ -1,8 +1,10 @@
 require('./test1');
 require('./test2');
+require('./TestBox');
 
 t1v = new Test1View();
 t2v = new Test2View();
+testbox = new TestBox({'el': '#test-3'});
 
 (function ($) {
     $(function () {
@@ -36,7 +38,7 @@ t2v = new Test2View();
         /* Attach click handlers for service plus buttons if needed */
         if ($('#basic-test-area .box-plus').length > 0) {
             var $parentBox, $target;
-            $('#basic-test-area .box-plus').click(function (event) {
+            $('#basic-test-area .primitive-test-box.box-plus').click(function (event) {
                 event.preventDefault();
                 $parentBox = $(event.target).parents('.service-box');
                 $target = $parentBox.find('.box-drawer');
@@ -48,7 +50,6 @@ t2v = new Test2View();
                     $target.addClass('open');
 
                 }
-                console.log('Service plus button clicked');
             });
         }
     })
