@@ -94,19 +94,10 @@ __webpack_require__(3);
 
 t1v = new Test1View();
 t2v = new Test2View();
-testbox3 = new TestBox({
-    'el': '#test-3',
-    'title': "Test #3",
-    'content': '<p><strong>Hello</strong>!&nbsp;This is the content for Test #3.</p>',
-    'image': 'images/service-3.jpg'
-});
 
-testbox4 = new TestBox({
-    'el': '#test-4',
-    'title': "Test #4",
-    'content': '<p><em><strong>Test #4</strong></em>&nbsp is about how to use Backbone.js powered UI components.</p>',
-    'image': 'images/service-4.jpg'
-});
+__webpack_require__(4);
+__webpack_require__(5);
+
 
 (function ($) {
     $(function () {
@@ -273,6 +264,34 @@ TestBox = Backbone.View.extend({
         }
     }
 })
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+t3v = new TestBox({
+    'el': '#test-3',
+    'title': "Test #3",
+    'content': '<p><strong>Hello</strong>!&nbsp;This is the content for Test #3.</p>',
+    'image': 'images/service-3.jpg'
+});
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+var test4Content = " \
+<p>\
+<em>Test #4</em>&nbsp;\
+is about how to use Backbone.js powered UI components.\
+</p>\
+";
+testbox4 = new TestBox({
+    'el': '#test-4',
+    'title': "Test #4",
+    'content': test4Content,
+    'image': 'images/service-4.jpg'
+});
 
 /***/ })
 /******/ ]);
