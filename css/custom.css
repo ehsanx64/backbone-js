@@ -51,8 +51,13 @@ a.navbar-brand img {
     margin-bottom: 1em;
 }
 
+.icofont {
+    padding: 7px;
+}
+
 @media only screen and (max-width: 767px) {
     .mainmenu-area #mainmenu {
         background: linear-gradient(to bottom, #0c1d3c 0%, #000000 100%);
     }
 }
+
