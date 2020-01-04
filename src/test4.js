@@ -11,9 +11,10 @@ const test4Content2meta = {
 }
 
 const test4Content2 = `
-    <p><em><strong>${test4Content2meta.title}</strong></em>&nbsp; ${test4Content2meta.description}</p>
+    <p>
+        <em><strong>${test4Content2meta.title}</strong></em>&nbsp; ${test4Content2meta.description}
+    </p>
 `;
-
 
 testbox4 = new TestBox({
     'el': '#test-4',
