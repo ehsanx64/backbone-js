@@ -11,7 +11,14 @@ var Shop = Backbone.Model.extend({
     $(function () {
         console.log('Running onready callback from ts1');
 
+        // Enable terminal.js for ts1 console
+        var term = new Terminal();
+
+        $('#ts1-terminal').append(term.html);
+        term.print("Terminal enabled...");
+
         // Let's create two shops first
+        term.print("Creating two shops...");
         var firstShop = new Shop({
             brand: 'Rolex',
             type: 'Wrist Watch',
@@ -28,7 +35,8 @@ var Shop = Backbone.Model.extend({
 
 
         // Show which brands each shop has
-        console.log('First shop sell: ' + firstShop.get('brand'));
-        console.log('Second shop sell: ' + secondShop.get('brand'));
+        term.print();
+        term.print('First shop sell: ' + firstShop.get('brand'))
+        term.print('Second shop sell: ' + secondShop.get('brand'))
     });
 })(jQuery);
