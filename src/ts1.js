@@ -13,6 +13,8 @@ var Shop = Backbone.Model.extend({
 
         // Enable terminal.js for ts1 console
         var term = new Terminal();
+        term.setBackgroundColor('#D9DDF2');
+        term.setTextColor('#332163');
 
         $('#ts1-terminal').append(term.html);
         term.print("Terminal enabled...");
@@ -35,7 +37,6 @@ var Shop = Backbone.Model.extend({
 
 
         // Show which brands each shop has
-        term.print();
         term.print('First shop sell: ' + firstShop.get('brand'))
         term.print('Second shop sell: ' + secondShop.get('brand'))
     });
