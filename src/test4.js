@@ -1,3 +1,5 @@
+import { TestBox} from "./TestBox";
+
 var test4Content = " \
 <p>\
 <em>Test #4</em>&nbsp;\
@@ -16,9 +18,15 @@ const test4Content2 = `
     </p>
 `;
 
-testbox4 = new TestBox({
-    'el': '#test-4',
-    'title': "Test #4",
-    'content': test4Content2,
-    'image': 'images/service-4.jpg'
-});
+
+(function ($) {
+    $(function () {
+        var testbox4 = new TestBox({
+            'el': '#test-4',
+            'title': "Test #4",
+            'content': test4Content2,
+            'image': 'images/service-4.jpg'
+        });
+
+    })
+})(jQuery);

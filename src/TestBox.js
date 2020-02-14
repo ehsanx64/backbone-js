@@ -1,4 +1,4 @@
-TestBox = Backbone.View.extend({
+export var TestBox = Backbone.View.extend({
     template: _.template($('#test-box-tpl').html()),
     drawerOpen: false,
     data: {},
@@ -36,4 +36,5 @@ TestBox = Backbone.View.extend({
 
         }
     }
-})
+});
+
