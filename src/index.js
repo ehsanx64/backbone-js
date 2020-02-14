@@ -9,9 +9,11 @@ require('./test3');
 require('./test4');
 
 
+
 (function ($) {
     $(function () {
         console.log('### App.js loaded');
+        require('./ts1');
 
         /* If elements carousel demo element exists enable owlCarousel for it */
         if ($('.elements-carousel').length > 0) {
