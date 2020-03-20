@@ -1,3 +1,5 @@
+import { L18n } from "./Tools";
+
 (function ($) {
     $(function () {
         console.log('### App.js loaded');
@@ -45,7 +47,14 @@
             });
         }
 
-    })
+        /**
+         * xlate testing area
+         */
+        console.log('Startingg xlate');
+        var l = new L18n();
+        l.translateAll();
+    });
+
 })(jQuery);
 
 // Create a new model class using Backbone.js (by extending it)
