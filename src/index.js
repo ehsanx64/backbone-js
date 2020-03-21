@@ -4,5 +4,6 @@ require('./test2');
 require('./test3');
 require('./test4');
 require('./ts1');
+require('./PersonManager');
 
 

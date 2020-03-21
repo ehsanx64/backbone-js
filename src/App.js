@@ -56,13 +56,3 @@ import { L18n } from "./Tools";
     });
 
 })(jQuery);
-
-// Create a new model class using Backbone.js (by extending it)
-var Person = Backbone.Model.extend({
-    defaults: {}
-});
-
-// Create a collection for holding Person objects
-var People = Backbone.Collection.extend({
-    model: Person
-});
