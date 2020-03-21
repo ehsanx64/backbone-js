@@ -142,8 +142,6 @@
                     <div class="col-xs-12 col-sm-4">
                         <h3>Person Manager</h3>
                         <p>Simple Person Manager</p>
-                        <hr />
-                        <h4>Operations:</h4>
                         <button class="btn btn-primary add-person">Add Person</button>
                     </div>
                     <div class="col-xs-12 col-sm-8 person-manager-page"></div>
