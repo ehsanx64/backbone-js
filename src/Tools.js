@@ -26,7 +26,6 @@ export function L18n() {
     this.translateAll = function () {
         jQuery('[data-xlate]').each(function (index, elem) {
             $(elem).html(that.translate($(elem).data('xlate')));
-            console.log(that.translate($(elem).data('xlate')));
         });
     }
 

@@ -50,7 +50,6 @@ import { L18n } from "./Tools";
         /**
          * xlate testing area
          */
-        console.log('Startingg xlate');
         var l = new L18n();
         l.translateAll();
     });

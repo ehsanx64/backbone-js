@@ -41,8 +41,6 @@
     });
 
     $(function () {
-
-
         var t2v = new Test2View();
     })
 })(jQuery);

@@ -27,6 +27,5 @@ const test4Content2 = `
             'content': test4Content2,
             'image': 'images/service-4.jpg'
         });
-
     })
 })(jQuery);

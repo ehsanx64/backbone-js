@@ -1,6 +1,5 @@
 import { TestBox } from './TestBox';
 
-
 (function ($) {
     $(function () {
         new TestBox({

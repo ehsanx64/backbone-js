@@ -9,8 +9,6 @@ var Shop = Backbone.Model.extend({
 
 (function ($) {
     $(function () {
-        console.log('Running onready callback from ts1');
-
         // Enable terminal.js for ts1 console
         var term = new Terminal();
         term.setBackgroundColor('#D9DDF2');
@@ -34,7 +32,6 @@ var Shop = Backbone.Model.extend({
             price: 400,
             stock: 16
         });
-
 
         // Show which brands each shop has
         term.print('First shop sell: ' + firstShop.get('brand'))

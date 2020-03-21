@@ -14,7 +14,6 @@
     });
 
     $(function () {
-
         var t1v = new Test1View();
     })
 })(jQuery);
