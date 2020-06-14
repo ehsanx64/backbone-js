@@ -1,6 +1,6 @@
 (function ($) {
     $.ajaxPrefilter(function (options, originalOptions, jqXhr) {
-        options.url = 'https://api.ehsanm.net' + options.url;
+        options.url = 'https://api.emlab.ir' + options.url;
     });
 
     $.fn.serializeObject = function() {
